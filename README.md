@@ -18,7 +18,7 @@
 
 # Objetivo deste estudo: 
 
-Como projeto de estudo do Modulo 1 do ALURA Bootcamp Data Science, explorar combinação de instrumentos para data parsing e um proof of concept análises para ser usado como modelo de Risk Based Monitoring na gestão do plano de vacinação ao nível das UDVEs catarinenses, seguindo o modelo ICH&GCP (3) usado em estudos clínicos na indústria farmacêutica. 
+Como projeto de estudo do Modulo 1 do ALURA Bootcamp Data Science Aplicada 2, explorar combinação de instrumentos para data parsing e um proof of concept análises para ser usado como modelo de Risk Based Monitoring na gestão do plano de vacinação ao nível das UDVEs catarinenses, seguindo o modelo ICH&GCP (3) usado em estudos clínicos na indústria farmacêutica. 
 
 # Interim results: 
 
@@ -37,7 +37,7 @@ Entre os mais graves problemas que conflitos entre estas três colunas podem ger
 
 O método usado foi essentialmente reativo e adaptativo a problemas regionais de eletricidade e/ou internet na região onde resido assim como limitações para tratar files voluminosos com os instrumentos disponíveis. De maneira geral, este projeto teve três fases, cada uma usando um instrumento diferente.
 
-## Fase 1: Terminal Command Line:  como o Colab não aceitava grandes files, usei o Terminal Command Line do meu computador para criar 17 files separados, cada um correspondendo a uma das UDVEs regionais do estado de SC Catarina.
+## Fase 1: Terminal Command Line:  como o Colab não aceitava grandes files, usei o Terminal Command Line do meu computador para criar 17 files separados, cada um correspondendo a uma das "Unidades De Vigilancia Epidemiologica (UDVE)" regionais do estado de SC Catarina.
 
 ## Fase 2: Usando o Google Drive, Colab e Python – isolei as três colunas mencionadas acima e contabilizei o número de registros para cada uma da combinaçoes existentes entre as três colunas.
 
