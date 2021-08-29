@@ -1,66 +1,69 @@
-# vac-covid_19_3005_SC_c26_c30_c31
+* Dataset Source – OpenDataSus  - Registros de Vacinação Covid19 - Dados SC – Santa Catarina – Brasil (1)
+* Dataset downloaded on 30 de maio 2021 as 05horas da manhã.
+* Inicial master File named – sc3005_05am.csv
+* Original total file size – 1.11 GB = 34 columns and 2,017,225 rows  (2)
 
-# Fonte – OpenDataSus (1)   
-# Registros de Vacinação Covid19
-# Dados SC – Santa Catarina – Brasil
-# Data de download– 30 de maio 2021 as 05horas da manhã.
-# Inicial máster File nomeado – sc3005_05am.csv
-# Total file size – 1.11 GB = 34 colunas e 2,017,225 de linhas  (2)
+# Problem: Combinations_of_Concern
 
-# Problema: 
+Inconsistencies between 3 columns in a covid- 19 registration (for Dose 1 and/or Dose2) related to identification of covid_19 vaccine applied to an individual.
 
-## Inconsistências entre 3 colunas referentes a identificação da covid_19 vacina aplicada ao individuo.
-## ••Estas inconsitencias nao permitem identificar com certeza qual foi o fabricante da vacina recebida pelo individuo.••
+Such inconsistencies do not allow to confirm which is the manufacturer of the vaccine received by the subject. 
 
-## coluna 26 - vacina_fabricante_nome
-## coluna 30 - vacina_codigo
-## coluna 31 - vacina_nome
+The 3 columns (or features or variables depending on how you want to call it) are:
 
-# Objetivo deste estudo: 
+* coluna 26 - vacina_fabricante_nome
+* coluna 30 - vacina_codigo
+* coluna 31 - vacina_nome
 
-Como projeto de estudo do Modulo 1 do ALURA Bootcamp Data Science Aplicada 2, explorar combinação de instrumentos para data parsing e um proof of concept análises para ser usado como modelo de Risk Based Monitoring na gestão do plano de vacinação ao nível das UDVEs catarinenses, seguindo o modelo ICH&GCP (3) usado em estudos clínicos na indústria farmacêutica. 
+# Objectif of this proof of concept project: 
+
+This personal project was developped for the completion of the Module 1 of the Alura Bootcamp Applied Data Sciences II (ABADSII). 
+
+Due to my yet limit knowledge of the python language and Google Colab interface, I explored a combination of tools for parsing UDVE data and develop a proof of concept analysis to be used as Risk Based Monitoring (RBM) tool in the management of covid vaccination plan in Brazilian State of Santa Catarina. 
+
+In the development of this proof of concept I am using ICH&GCP (3) RBM procedures I am used to follow on my operational clinical research activities.
+
 
 # Interim results: 
 
-12% dos registros catarinenses (249,437 out of 2 Million) de vacinacao contra o covid-19 na base de dados e data identificados acima, não permitem de confirmar com certeza qual foi o fabricante da vacina tomada pelo individuo. Praticamente 100 % destes registros conflituosos envolvem vacinas da Oxford-Astra Zeneca/ F. Oswaldo Cruz e SINOVAC/BUTANTAN. Lembremos que os intervalos entre as doses 1 e 2 destes fabricantes é totalmente diferente, três meses e um mês, respectivamente. Lembremos também que, devido a problemas de fornecimento das vacinas, o intervalo entre as duas doses foi também estendido para estes dois fabricantes, em algum momento nos últimos meses.
+Up to 30 May 2021, for 12% of vaccination registrations in the Brazilian state of Santa Catarina (249,437 registrations out of 2 Million), it is not possible to be 100% sure which covid-19 vaccine the individual received. 
 
-Entre os mais graves problemas que conflitos entre estas três colunas podem gerar, podemos citar:
+About 100% of the combinations of concern involves the Oxford-Astra Zeneca/ F. Oswaldo Cruz e SINOVAC/BUTANTAN.
 
-### Análises de Pharmacovigilancia: por exemplo, avaliacao epidemiologica da frequencia de raro Serious Adverse Event de AVCs como documentados em território europeu (4)
+We should remember that the intervals between the doses 1 and 2 between these two manufactureres are 3 months and 1 month respectively. 
 
-### Compliance: assegurar que os postos de saúde & vacinação sejam capazes de identificar e planejar a planilha de vacinação para dose 2.
+We also must remember that the intervals between the two doses changed, for both manufacturers, sometime between January and May 2021.
 
-### Logistica, Gestão e reabastecimento de stocks a nivel federeal, estadual e municipal dentro do intervalo adequado.
+Amongst the most serious problems such combinations of concern between those three columns can create:
+
+* Pharmacovigilance analysis: as per example, the evaluation of frequency of Serious Adverse Events as Atypical Strokes already identified and documented in the European territory (4)
+
+* Compliance: ensure local health centers across the UDVEs are able to identify and follow up when their members should return for dose 2.
+
+* Logistic and management of different vaccines stock at federal, state and county level at appropriate intervals.
 
 
-# Método usado para este projeto: 
+# Method used for this proof of concept project:
 
-O método usado foi essentialmente reativo e adaptativo a problemas regionais de eletricidade e/ou internet na região onde resido assim como limitações para tratar files voluminosos com os instrumentos disponíveis. De maneira geral, este projeto teve três fases, cada uma usando um instrumento diferente.
+As explained above, to compensate for my yet limit knowledge of Python and the Google Colab interface I organised this project in 3 phases:
 
-## Fase 1: Terminal Command Line:  como o Colab não aceitava grandes files, usei o Terminal Command Line do meu computador para criar 17 files separados, cada um correspondendo a uma das "Unidades De Vigilancia Epidemiologica (UDVE)" regionais do estado de SC Catarina.
+* Phase 1: Using Terminal Command Line: as I had trouble using Google Colab to import large files, I used the terminal command line from my computer to parse and create 17 separated files, each corresponding to one of  UDVE ( "Unidades De Vigilancia Epidemiologica (UDVE)" regionais do estado de SC Catarina.)
 
-## Fase 2: Usando o Google Drive, Colab e Python – isolei as três colunas mencionadas acima e contabilizei o número de registros para cada uma da combinaçoes existentes entre as três colunas.
+* Phase 2: Using Google Drive & Colab and Python - I isolated the 3 above columns and counted the nr of registers for each unique combinations between the 3 columns.
 
-## Fase 3: Como meu aprendizado com o Colab&Python ainda está na sua fase inicial e para respeitar o deadline usei o Excel para agrupar os resultados de cada região, contabilizar o número total de registros assim como a percentagem de registros por UDVE com combinações obviamente errôneas.
+* Phase 3: Using Excel - As my knowledge of Colab&Python is still limited and to respect the Bootcamp deadline to deliver the project I used Excel to group the different results per UDVE region, and count the total nr of registers per UDVE and the proportion of each of the differentes combinations of concern.
 
-Informações sobre a Fase 1 e 3 se encontram no Excel file “sc3005_05am - Documentação Github Phases 1 e 3 - amf60 vac-covid_19_3005_SC_c26_c30_c31”
 
-# Comentario:
+Further information about Phases 1 to 3 can be found in the Excel file “sc3005_05am - Documentação Github Phases 1 e 3 - amf60 vac-covid_19_3005_SC_c26_c30_c31”
 
-A construção, ainda em progresso, deste projeto de recursos híbridos para tratamento e análise esta baseado no modelo de Risk Based Monitoring. Permitiu identificar, localizar e comprovar um problema sistêmico (porque identificado em 16 das 17 UDVES) na documentação dos registros de vacinações ao nível de alguns alguns postos de vacinacao&saude no estado de Santa Catarina Brasil. A boa notícia é que este problema parece ser localizado (portanto teoricamente necessitando um simples plano corretivo), pois apenas uma UDVE regional concentra ~ 72% destes registros conflituosos. 
 
-Note que este projeto também está sendo elaborada para documentar, seguindo regras ICH&GCP, para assegurar reproducibility, replicability and generalizibility (5) deste projeto para outros estados brasileiros.
+* (1) https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao/resource/ef3bd0b8-b605-474b-9ae5-c97390c197a8?view_id=6bf433e7-16ec-4dfa-a725-08db02322bd6
 
-Tenho certeza de que, com ajuda dos Alurienses este projeto evoluirá significativamente durante este Alura Bootcamp DataScience. Talvez venha ajudar a identificar e resolver problemas sistêmicos nos registros de vacinação do covid-19 em outros estados brasileiros. Principalmente porque estas bases de dados irao ficar maiores e mais complexas nos meses a seguir com o aumento de registros e fabricantes de vacina contra o covid-19
+* (2) O numero de linhas esta relativamente proximo do ultimo DIVE boletim disponivel do dia 26 de Maio que contabilizava 2,263,441 ( http://www.dive.sc.gov.br/index.php/arquivo-noticias/1635-vacinacao-em-sc-2-263-441-doses-da-vacina-contra-a-covid-19-foram-aplicadas-em-sc). E possivel tambem que parte desta diferenca se deva a problemas tecnicos nos ultimos dias (http://www.dive.sc.gov.br/index.php/arquivo-noticias/1639-nota-sobre-dados-do-balanco-parcial-de-vacinacao-contra-a-covid-19-em-santa-catarina)
 
-Cordialmente,
+* (3) https://www.ich.org
 
-Aldir MEDEIROS FILHO
+* (4) https://www.bbc.com/news/health-56674796)
 
-*(1) https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao/resource/ef3bd0b8-b605-474b-9ae5-c97390c197a8?view_id=6bf433e7-16ec-4dfa-a725-08db02322bd6 
-*(2) O numero de linhas esta relativamente proximo do ultimo DIVE boletim disponivel do dia 26 de Maio que contabilizava 2,263,441 ( http://www.dive.sc.gov.br/index.php/arquivo-noticias/1635-vacinacao-em-sc-2-263-441-doses-da-vacina-contra-a-covid-19-foram-aplicadas-em-sc). E possivel tambem que parte desta diferenca se deva a problemas tecnicos nos ultimos dias (http://www.dive.sc.gov.br/index.php/arquivo-noticias/1639-nota-sobre-dados-do-balanco-parcial-de-vacinacao-contra-a-covid-19-em-santa-catarina)
-
-*(3) https://www.ich.org
-*(4) https://www.bbc.com/news/health-56674796)
-*(5) https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science
+* (5) https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science
 
