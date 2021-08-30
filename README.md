@@ -53,9 +53,9 @@ As explained above, to compensate for my yet limit knowledge of Python and the G
 
 * Phase 3: Using Excel - As my knowledge of Colab&Python is still limited and to respect the Bootcamp deadline to deliver the project I used Excel to group the different results per UDVE region obtained in phase 2, and count the total nr of registers per UDVE and the proportion of each of the differentes combinations of concern.
 
-## As the structure of the 17 notebooks created in the phase II are identical, for convenience and because we are still on the early phases of this work, I only downloaded to this github repository the notebook for UDVE13.
+## As the structure of the 17 notebooks created in the phase II are identical, for convenience and because we are still on the early phases of this work, I only downloaded to this github repository the notebook for UDVE13 (sc3005_UDVE_13.ipynb). All the other 16 UDVES notebooks are stored in my My Drive > Alura DS Bootcamp > Combinations of Concern Projects > ALura DSB-M1_P_sc3005_05am
 
-## Further information about Phases 1 to 3 can be found in the Excel file “sc3005_05am - Documentação Github Phases 1 e 3 - amf60 vac-covid_19_3005_SC_c26_c30_c31”
+## Further information about Phases 1 to 3 can be found in the Excel file “sc3005_05am - Documentação Github Phases 1 e 3 - amf60 vac-covid_19_3005_SC_c26_c30_c31” attahced to this repository.
 
 
 * (1) https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao/resource/ef3bd0b8-b605-474b-9ae5-c97390c197a8?view_id=6bf433e7-16ec-4dfa-a725-08db02322bd6
