@@ -1,7 +1,7 @@
 * Dataset Source – OpenDataSus  - Registros de Vacinação Covid19 - Dados SC – Santa Catarina – Brasil (1)
-* Dataset downloaded on 30 de maio 2021 as 05horas da manhã.
+* Dataset downloaded on 30 May 2021 as 05:00 am.
 * Inicial master File named – sc3005_05am.csv
-* Original total file size – 1.11 GB = 34 columns and 2,017,225 rows (2)
+* Original total file size – 1.11 GB = 34 columns and 2,017,225 rows (or registers) (2)
 
 # Problem: Combinations_of_Concern
 
